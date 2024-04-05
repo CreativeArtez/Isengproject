@@ -2,6 +2,19 @@ Splitting();
 gsap.registerPlugin(ScrollTrigger);
 
 
+//for scroll from lenis
+const lenis = new Lenis()
+  lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+  function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf)
+//
+  
 
   //untuk navbar
   const menuBtn = document.querySelector('.nav');
@@ -64,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //animasi opening
 const op = gsap.timeline();
 op.from('.dalam',{
+     delay:1,
     yPercent:200,
     stagger:0.1
 
