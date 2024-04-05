@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Coda&family=Poppins&family=Raleway:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+::-webkit-scrollbar{
+     display: none;
+}
+
+*{
+     margin: 0;
+     padding: 0;
+}
+
+body{
+
+     background-color: black;
+}
+::selection {
+     background-color: rgb(122, 235, 122);
+     color: white;
+ }
+/**/
+.custom-cursor {
+     position: fixed;
+     width: 20px;
+     height: 20px;
+     border-radius: 50%;
+     background-color: rgb(255, 255, 255) ;
+     mix-blend-mode: difference;
+     pointer-events: none; 
+     z-index: 9999; 
+     opacity: 0; 
+ }
+/*navbar*/
+.navbar{
+     display: flex;
+     z-index: 200;
+     width: 100%;
+     height: 100px;
+     top: 0;
+     left: 0;
+     position: fixed;
+
+}
+.sec-navbar{
+     font-family: "Abel", sans-serif;
+     width: 100%;
+     height: 100vh;
+     background-color: rgb(121, 165, 140);
+     position: fixed;
+     display: none;
+     z-index: 100;
+
+}
+.bag1{
+     position: relative;
+     width: 60%;
+     height: 100%;
+     border-right: 1px solid black;
+}
+.list{
+     position: absolute;
+     left: 2%;
+     top: 20%;
+     width: 60%;
+     height: 50%;
+
+     display: flex;
+     flex-wrap: wrap;
+}
+.list a{
+     display: flex;
+     margin: auto;
+     width: 100%;
+     height: 80px;
+
+     text-decoration: none;
+
+}
+.list a h1{
+     color: rgb(0, 0, 0);
+     font-weight: 200;
+     font-size: 3em;
+ 
+}
+.num{
+     display: flex;
+     border: 0.5px solid black;
+     border-radius: 10px;
+     width: 30px;
+     height: 20px;
+     margin-right: 10px;
+}
+.num h2{
+     margin: auto;
+     color: black;
+     font-size: 0.8em;
+     font-weight: 200;
+}
+
+.footer{
+
+     width: 15%;
+     height: max-content;
+     position: absolute;
+     bottom: 5%;
+     left: 50%;
+}
+.footer .link{
+     display: flex;
+     flex-wrap: wrap;
+     width: 100%;
+     
+}
+.link a{
+     position: relative;
+     width: max-content;
+     height: max-content;
+     color: rgb(0, 0, 0);
+     font-size: 1em;
+     font-weight: 600;
+     text-decoration: none;
+}
+.link a::before{
+     content: '';
+     bottom: 5%;
+     left: 0;
+     position:absolute;
+     content: '';
+     width: 0%;
+     height: 1px;
+     background-color: rgb(0, 0, 0);
+     transition: 0.2s all ease-in-out;
+  
+}
+.link a:hover::before{
+     width: 100%;
+
+}
+.material-symbols-outlined {
+     transform: translate(8%,15%);
+     font-size: 0.9em;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.bag2{
+     position: relative;
+     margin: auto;    
+     width: 40%;
+     height: 100%;
+
+}
+.bag2 h1{
+     text-align: right;
+     width: 80%;
+     top: 2%;
+     right: 2%;
+     position: absolute;
+     color: black;
+     font-size: 3em;
+}
+
+
+.nav{
+     cursor: pointer;
+     position: relative;
+     margin: auto;
+     margin-top: 20px;
+     width: 70px;
+     height: 70px;
+     display: flex;
+}
+.line-nav{
+     margin: auto;
+     height: 90%;
+     width: 1px;
+     background-color: white;
+}
+.horizontal{
+     top: 50%;
+     left: 5%;
+     width: 90%;
+     height: 1px;
+position: absolute;
+}
+/* kelas satu*/
+.sec-one{
+     width: 100%;
+     height: 90vh;
+     position: relative;
+     display: flex;
+     overflow: hidden;
+}
+
+.sec-one .one-text{
+     text-align: center;
+     font-family: "Raleway", sans-serif;
+     transform: translateY(10%);
+     margin: auto;
+     width: max-content;
+     height: max-content;
+     z-index: 1;
+     color: rgb(224, 224, 224);
+     mix-blend-mode: difference;
+}
+.left{
+     margin-left: 200px;
+}
+.right{
+     margin-right: 200px;
+}
+.gsap{
+     width: max-content;
+     height: max-content;
+     display: inline-block;
+     overflow: hidden;
+}
+.dalam{
+     font-weight: 400;
+     line-height: 90%;
+     font-size: 7em;
+     letter-spacing:-1px ;
+}
+
+/* kelas dua*/
+.sec-two{
+     width: 100%;
+     height: 100vh;
+     position: relative;
+     margin-bottom: 200px;
+}
+.video-cover{
+     display: block;
+     left: 4%;
+     bottom: 0;
+     position: relative;
+     width: 70%;
+     height: 70%;
+}
+.video-cover .video{
+     object-fit: cover;
+     left: 0 !important;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     
+}
+
+
+/* kelas tiga*/
+.char{
+     display: inline-block;
+}
+.sec-three{
+     color: rgb(207, 212, 228);
+     position: relative;
+     font-family: "Abel", sans-serif;
+     width: 100%;
+     height: 95vh;
+     display: flex;
+
+}
+.lines{
+     content: '';
+     position: absolute;
+     background-color: rgb(133, 133, 133);
+   
+}
+.-atas{
+     width: 100%;
+     height: 1px;
+     top: 0;
+     left: 0;
+}
+.-tengah{
+     width: 1px;
+     height: 100%;
+     top: 0;
+     left: 50%;
+}
+.-bawah{
+     width: 100%;
+     height: 1px;
+     bottom: 0;
+     left: 0;
+}
+.baris{
+     margin: auto;
+     width: 50%;
+     height: 100%;
+
+}
+.bar{
+     display: flex;
+     margin-left: 5%;
+     width: 120px;
+     height: 30px;
+    border: 1px solid white;
+     border-radius: 30px;
+     margin-top: 20px;
+     margin-bottom: 20px;
+
+     
+}
+.bar h2{
+     margin: auto;
+     font-weight: 100;
+     font-size: 1.2em;
+}
+.baris h1{
+     margin-left: 5%;
+     font-weight: 200;
+     font-size: 4em;
+     width: 80%;
+}
+.text-2{
+     margin-top: 30px;
+     margin-left: 1%;
+     width: 98%;
+     height: 40%;
+     display: flex;
+}
+.text-2 p{
+     width: 40%;
+     height: 100%;
+     margin: auto;
+}
+
+
+/* kelas empat*/
+.sec-four{
+     margin-top: 2px;
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     overflow: hidden;
+}
+.sec-four img{
+     scale: 1.5;
+     object-fit: cover;
+     width: 100%;
+     height: 100%;
+     margin: auto;
+}
+
+/*sec five*/
+.sec-five{
+     position: relative;
+     font-family: "Abel", sans-serif;
+     width: 100%;
+     height: 100vh;
+     display: flex;
+
+
+}
+.five-cover{
+     
+     margin: auto;
+     width: 90%;
+     height: 100%;
+
+}
+.five-text{
+     width: 55%;
+     height:90%;
+     margin-left: 5%;
+     margin-top: 2%;
+     display: flex;
+     flex-wrap: wrap;
+}
+.five-text .h1{
+     margin: auto;
+    
+     width: 100%;
+     height: max-content;
+     color: rgb(255, 255, 255);
+     font-size: 3em;
+     font-weight:200;
+     line-height: 110%;
+}
+.five-text .bar-line{
+     margin: auto;
+     width: 100%;
+     height: 50px;
+     display: flex;
+}
+.bar-line h1{
+     margin: auto;
+     color:grey;
+     font-size: 1em;
+     width: max-content;
+}
+.bar-line span{
+     margin: auto;
+     height: 1px;
+     background-color: gray;
+     width: 80%;
+}
+.desc-kecil{
+
+     color: gray;
+     width: 20%;
+     height: 30%;
+     position: absolute;
+     right: 10%;
+     bottom: 5%;
+}
+.desc-kecil p{
+     margin-top: 30px;
+     margin-bottom: 30px;
+     margin-left: 3%;
+     width: 100%;
+     height: max-content;
+}
+.line-k{
+     display: flex;
+     width: 100%;
+     height: 30px;
+}
+.line-k h1{
+     
+     margin: auto;
+     width: max-content;
+     font-size: 1.1em;
+}
+.line{
+     background-color: gray;
+     margin: auto;
+     height: 1px;
+     width: 80%;
+}
+.bar-k{
+     display: flex;
+     width: 80px;
+     height: 30px;
+     border: 0.5px  solid gray;
+     border-radius: 10px;
+}
+.bar-k h1{
+     text-align: center;
+     margin: auto;
+     font-size: 1em;
+}
+
+/*sec six*/
+.sec-six{
+     font-family: "Abel", sans-serif;
+     width: 100%;
+     height: 100vh;
+     display: flex;
+}
+.six-center{
+     width: 90%;
+     height: 90%;
+     margin: auto;
+
+     display: flex;
+}
+.six-baris-satu{
+     margin: auto;
+     display: flex;
+     width: 35%;
+     height: 100%;
+}
+.six-baris-satu .img-cover{
+     display: flex;
+     overflow: hidden;
+     margin: auto;
+     width: 85%;
+     height: 95%;
+     border-radius: 10px;
+}
+.img-cover img{
+    margin: auto;
+     scale: 1.3;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+.six-baris-dua{
+     position: relative;
+     width: 65%;
+     height: 100%;
+}
+.six-baris-dua h1{
+     height: 65%;
+     margin-top: 2%;
+     color: rgb(255, 255, 255);
+     font-size: 3em;
+   
+     font-weight: 200;
+     line-height: 100%;
+}
+.line-six{
+     width: 100%;
+     height: 30px;
+     display: flex;
+}
+.line-six h1{
+     color: grey;
+     margin: auto;
+     text-align: center;
+     font-size: 1em;
+     width: max-content;
+}
+.line-six-s{
+     margin: auto;
+     width: 40%;
+     height: 1px;
+     background-color: grey;
+}
+.button-and-another{
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 100px;
+     display: flex;
+}
+.button-cover{
+     border: 1px solid white;
+     margin: auto;
+     width: 210px;
+     height: 70px;
+     display: flex;
+}
+.button-cover:hover .button{
+     transform: translate(-7%,-15%);
+}
+.button-cover:hover .arrow-left{
+     transform: translateX(40%);
+}
+.arrow-left{
+     transform: translateX(-100%);
+}
+.button-cover:hover .arrow-right{
+     transform: translateX(100%);
+}
+.arrow-right{
+     transform: translateX(-80%);
+}
+.button:hover h2{
+     transform: translateX(10%);
+    
+
+}
+.button{
+     overflow: hidden;
+     display: flex;
+     transition: 0.2s all ease-in-out;
+     margin: auto;
+     width: 100%;
+     height: 100%;
+     background-color: white;
+}
+.button h2{
+     transition: 0.2s all ease-in-out;
+     transform: translateX(-20%);
+     color: black;
+     font-size: 2em;
+     margin: auto;
+}
+
+.button-and-another .material-symbols-outlined {
+     transition: 0.2s all ease-in-out;
+     margin: auto;
+     font-size: 1.7em;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.line-big-six{
+     display: flex;
+     margin: auto;
+     width: 80%;
+     height: max-content;
+
+}
+.line-big-six h1{
+     font-size: 2em;
+     color: grey;
+     margin:auto ;
+
+}
+.lline{
+     width: 80%;
+     height: 1px;
+     background-color: grey;
+     margin: auto;
+}
+/*sec seven*/
+.sec-seven{
+     color: rgb(207, 212, 228);
+    
+     overflow-x: hidden;
+     position: relative;    
+ }
+ .container {
+     position: relative;
+     display: flex;
+     width: 100vw;
+     .col {
+         display: flex;
+         gap: 3em;
+     }
+     section {
+         height: 100vh;
+         width: 100vw;
+     }
+ }
+ .for-width{
+     width: 100vw;
+     height: 100vh;
+     position: relative;
+ }
+
+.cover-six-gsap{
+     position: absolute;
+     background-color: black;
+     display: flex;
+     flex-wrap: wrap;
+     border-top: 1px solid rgb(43, 43, 43);
+     width: 100vw;
+     height: 80vh;
+     bottom: 0;
+}
+.cover-six-gsap:nth-of-type(1n){
+     z-index: 1;
+}
+.cover-six-gsap:nth-of-type(2n){
+     z-index: 2;
+}
+.cover-six-gsap:nth-of-type(3n){
+     z-index: 3;
+}
+.cover-six-gsap:nth-of-type(4n){
+     z-index: 4;
+
+}
+.baris-six{
+     font-family: "Abel", sans-serif;
+     margin: auto;
+     width: 50%;
+     height: 100%;
+}
+.baris-six .bar {
+     margin-top: 5%;
+     width: 50px;
+     height: 30px;
+     border-radius: 50px;
+     
+}
+.baris-six .bar h2{
+     font-size: 1.5em;
+}
+.baris-six h1{
+     margin-top: 3%;
+     margin-left: 5%;
+     font-size: 5em;
+}
+.baris-six p{
+     width: 40%;
+     margin-top: 5%;
+     margin-left: 5%;
+}
+.flex{
+     position: relative;
+     display: flex;
+}
+.flex::before{
+     position: absolute;
+     content: '';
+     width: 1px;
+     height: 90%;
+     left: 0;
+     bottom: 0;
+     background-color: rgb(49, 49, 49);
+}
+.six-img{
+     margin: auto;
+   
+     width: 70%;
+     height: 80%;
+     object-fit: cover;
+}
+
+
+
+
+/*for contact*/
+.contact{
+     overflow: hidden;
+     font-family: "Abel", sans-serif;
+     height: 90vh;
+     display: flex;
+
+}
+.contact-text{
+     display: flex;
+     flex-wrap: wrap;
+     margin: auto;
+}
+.contact-text h1{
+     width: 100%;
+     height: max-content;
+     text-align: center;
+     color: white;
+     font-size: 3.5em;
+     letter-spacing: 2px;
+     line-height: 100%;
+     margin-bottom: 15px;
+}
+.contact-text .btn-contact{
+     overflow: hidden;
+     position: relative;
+     display: flex;
+     margin: auto;
+     width: 80px;
+     height: 30px;
+     border: 0.7px solid white;
+     border-radius: 20px;
+}
+.btn-contact::before{
+     z-index: -1;
+     position: absolute;
+     content: '';
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     height: 0%;
+     background-color: aliceblue;
+     transition: 0.3s all ease-in-out;
+}
+.btn-contact:hover::before{
+     height: 100%;
+}
+.btn-contact:hover h2{
+     color: black;
+}
+.btn-contact h2{
+     transition: 0.3s all ease-in-out;
+     font-size: 0.9em;
+     font-weight: 200;
+     margin: auto;
+}
+.contact video{
+     transform: translateY(80%) scaleX(1.3);
+     bottom: 0;
+     position: absolute;
+     width: 70%;
+     left: 15%;
+}
